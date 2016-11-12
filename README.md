@@ -11,7 +11,7 @@
 # basic
   i = init
   a = add
-  c = commit -m
+  c = commit
   cl = clone
   st = status
 
