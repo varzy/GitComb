@@ -29,6 +29,9 @@
   co = checkout
   cob = checkout -b
 
+# merge
+  mg = merge
+  
 # reset
   rs = reset --hard
   rslast = reset --hard HEAD^
