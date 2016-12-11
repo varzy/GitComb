@@ -1,6 +1,7 @@
 [user]
 	name = 
 	email = 
+
 [alias]
 # basic
   i = init
@@ -25,6 +26,7 @@
 
 # merge
   mg = merge
+  mgn = merge --no-ff
 
 # reset
 	rs = reset --hard
