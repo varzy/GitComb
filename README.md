@@ -4,8 +4,8 @@
 
 ```
 [user]
-  name = 
-  email = 
+  name = zy
+  email = i@zyis.me
 
 [alias]
 # basic
