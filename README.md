@@ -12,6 +12,7 @@
   i = init
   a = add
   c = commit
+  cm = commit -m
   cl = clone
   st = status
 
