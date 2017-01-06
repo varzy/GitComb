@@ -20,9 +20,10 @@
   p = push
   po = push origin	
   pom = push origin master
+  pot = push origin --tags
 
 # branch
-b = branch
+  b = branch
   bd  = branch -d
   bD  = branch -D
 
