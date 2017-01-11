@@ -12,7 +12,6 @@
   i = init
   a = add
   c = commit
-  cm = commit -m
   cl = clone
   st = status
 
@@ -53,4 +52,6 @@
   proxy = socks5://127.0.0.1:1080
 [https]
   proxy = socks5://127.0.0.1:1080
+[credential]
+  helper = wincred
 ```
