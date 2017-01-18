@@ -1,9 +1,6 @@
 # GitComb
 
-Git 知识梳理。
-
-- Github 链接： <https://github.com/varzy/GitComb>
-- Gitbook 链接： <https://varzy.gitbooks.io/gitcomb/content/>
+Git 知识梳理。在线链接： <http://varzy.me/GitComb/>
 
 由于本人知识有限，故书中不可避免的可能出现纰漏，欢迎各位朋友斧正。
 
