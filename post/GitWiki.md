@@ -18,11 +18,7 @@ git init [floder_name]
 
 git init --bare
 # 创建一个 Git 裸仓库​​
-
-git clone [URL]
-# 克隆一个远程仓库
 ```
-
 
 ## 增删文件
 
@@ -39,14 +35,14 @@ git add .
 # 添加当前目录所有文件到暂存区​
 
 git add -p
-# 对每个文件的修改会要求手动确认
+# 对每个文件的修改会要求逐次手动确认
 ```
 
 ### 删除文件
 
 ```
 git rm [file]
-# 删除工作区的文件，并将此操作放入暂存区
+# 删除工作区的文件，并将此操作放入暂存区。等同于在文件资源管理器中手动删除
 
 git rm --cached [file]
 # 停止追踪指定文件，但该文件会保留在工作区
@@ -68,7 +64,7 @@ git commit -m "[description]" [file] [file]
 git checkout [file]
 # 恢复暂存区的指定文件到工作区
 
-git checkout [commit_id] [file]
+git checkout [commit] [file]
 # 恢复某个 commit 的指定文件到暂存区和工作区
 
 git checkout .
@@ -77,17 +73,17 @@ git checkout .
 git reset --hard
 # 重置暂存区与工作区，与上一次 commit 保持一致​
 
-git reset [commit_id]
+git reset [commit]
 # 重置当前分支的 HEAD 为指定 commit，同时重置暂存区，但工作区不变
 
-git reset --hard [commit_id]
+git reset --hard [commit]
 # 重置当前分支的 HEAD 为 指定commit，同时重置暂存区和工作区，与指定 commit 一致
 
 git stash
-# 暂时将未提交的变化移除​
+# 将未提交的变化暂时移除​
 
 git stash pop
-# 将未提交的变化移入
+# 将未提交的变化再次移入
 ```
 
 ## 分支
@@ -112,7 +108,7 @@ git branch [branch] [commit]
 # 新建一个分支，指向指定commit
 
 git --orphan gh-pages
-3 新建一个空白分支​
+# 新建一个空白分支​
 
 git merge [branch]
 # 使用快速合并，合并指定分支到当前分支
@@ -130,12 +126,41 @@ git branch -dr [remote/branch]
 ```
 git tag
 # 列出所有tag
+
+git tag [tag]
+# 在当前 commit 新建一个 tag
+
+git tag [tag] [commit]
+# 在指定 commit 新建一个 tag
+
+git tag -d [tag]
+# 删除本地 tag
+
+git push origin :refs/tags/[tag]
+# 删除远程 tag
+
+git show [tag]
+# 查看 tag 信息
+
+git push origin [tag]
+# 提交指定 tag
+
+git push origin --tags
+# 提交所有 tag
+
+git checkout -b [branch] [tag]
+# 新建一个分支，指向某个 tag
 ```
 
 ## 查看
 
 
 ## 远程仓库
+
+```
+
+```
+
 
 
 ## 补充
