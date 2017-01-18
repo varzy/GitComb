@@ -147,6 +147,9 @@ git merge [branch]
 git merge --no-ff [branch]
 # 使用正常合并，合并指定分支到当前分支​
 
+git rebase [branch]
+# 在一个分支里提交的改变移到另一个分支里重放一遍
+
 git push origin --delete [branch]
 git branch -dr [remote/branch]
 # 删除远程分支
@@ -254,6 +257,8 @@ git config --global alias.[st] status
 ```
 
 ### 命令简写意义
+
+来自 [阮一峰：常用 Git 命令清单](常用 Git 命令清单) 一文中 AnnabellChan 的评论
 
 ```
 git checkout -b，b 其实是 browse 的 abbr
