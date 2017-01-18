@@ -4,43 +4,47 @@
 
 ```
 [user]
-  name = 
-  email = 
+	name = 
+	email = 
 
 [alias]
 # basic
   i = init
   a = add
-  c = commit
-  cl = clone
-  st = status
+	c = commit
+	cl = clone
+	st = status
 
 # push
-  p = push
-  po = push origin	
-  pom = push origin master
+	p = push
+  po = push origin
+	pom = push origin master
   pot = push origin --tags
 
-# branch
-  b = branch
-  bd  = branch -d
-  bD  = branch -D
+# pull
+  pl = pull
+	fe = fetch
 
-# checkout
-  co = checkout
-  cob = checkout -b
+# branch
+	b = branch
+	bd  = branch -d
+	bD  = branch -D
+
+# tag
+	t = tag
+	td = tag -d
 
 # merge
   mg = merge
   mgn = merge --no-ff
 
-# reset
-  rs = reset --hard
-  rslast = reset --hard HEAD^
+# checkout
+	co = checkout
+	cob = checkout -b
 
-# tag
-  t = tag
-  td = tag -d
+# reset
+	rs = reset --hard
+	rsl = reset --hard HEAD^
 
 # remote
   re = remote
@@ -50,8 +54,11 @@
 	
 [http]
   proxy = socks5://127.0.0.1:1080
+
 [https]
   proxy = socks5://127.0.0.1:1080
+
 [credential]
-  helper = wincred
+	helper = wincred
+
 ```

@@ -1,6 +1,6 @@
 [user]
-	name = zy
-	email = i@zyis.me
+	name = 
+	email = 
 
 [alias]
 # basic
@@ -12,30 +12,34 @@
 
 # push
 	p = push
-  po = push origin	
+  po = push origin
 	pom = push origin master
   pot = push origin --tags
+
+# pull
+  pl = pull
+	fe = fetch
 
 # branch
 	b = branch
 	bd  = branch -d
 	bD  = branch -D
 
-# checkout
-	co = checkout
-	cob = checkout -b
+# tag
+	t = tag
+	td = tag -d
 
 # merge
   mg = merge
   mgn = merge --no-ff
 
+# checkout
+	co = checkout
+	cob = checkout -b
+
 # reset
 	rs = reset --hard
-	rslast = reset --hard HEAD^
-
-# tag
-	t = tag
-	td = tag -d
+	rsl = reset --hard HEAD^
 
 # remote
   re = remote
@@ -45,7 +49,9 @@
 	
 [http]
   proxy = socks5://127.0.0.1:1080
+
 [https]
   proxy = socks5://127.0.0.1:1080
+
 [credential]
-  helper = wincred
+	helper = wincred
