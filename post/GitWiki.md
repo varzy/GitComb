@@ -133,12 +133,6 @@ git tag [tag]
 git tag [tag] [commit]
 # 在指定 commit 新建一个 tag
 
-git tag -d [tag]
-# 删除本地 tag
-
-git push origin :refs/tags/[tag]
-# 删除远程 tag
-
 git show [tag]
 # 查看 tag 信息
 
@@ -148,12 +142,40 @@ git push origin [tag]
 git push origin --tags
 # 提交所有 tag
 
+git tag -d [tag]
+# 删除本地 tag
+
+git push origin :refs/tags/[tag]
+# 删除远程 tag
+
 git checkout -b [branch] [tag]
 # 新建一个分支，指向某个 tag
 ```
 
 ## 查看
 
+```
+git status
+# 显示有过变更的文件
+
+git log
+# 显示当前分支的版本历史。默认显示三次，可以在后面跟 -[num] 参数自定义显示次数
+
+git log -[num] --pretty=oneline
+# 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
+
+git diff
+# 显示所有文件的暂存区和工作区的差异
+
+git diff -- [file]
+# 显示某个文件的暂存区和工作区的差异
+
+git diff HEAD
+# 显示所有文件的工作区与当前分支最新 commit 之间的差异
+
+git diff HEAD -- [file]
+# 显示某个文件的工作区与当前分支最新 commit 之间的差异
+```
 
 ## 远程仓库
 
