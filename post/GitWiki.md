@@ -258,7 +258,7 @@ git config --global alias.[st] status
 
 ### 命令简写意义
 
-来自 [阮一峰：常用 Git 命令清单](常用 Git 命令清单) 一文中 AnnabellChan 的评论
+来自 [阮一峰：常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html) 一文中 AnnabellChan 的评论
 
 ```
 git checkout -b，b 其实是 browse 的 abbr
