@@ -25,7 +25,7 @@ git init --bare
 ### 添加文件
 
 ```
-git add [file]/[dir]
+git add [dir]/[file]
 # 添加指定文件或指定文件夹到暂存区
 
 git add *.[file_type]
@@ -54,7 +54,7 @@ git rm --cached [file]
 git commit -m "[description]"
 # 提交暂存区的所有文件到仓库
 
-git commit -m "[description]" [file] [file]
+git commit -m "[description]" [file1] [file2]
 # 提交暂存区的指定文件到仓库
 ```
 
@@ -62,19 +62,19 @@ git commit -m "[description]" [file] [file]
 
 ```
 git status
-# 显示有过变更的文件
+# 显示变更过的文件
 
-git log
-# 显示当前分支的版本历史。默认显示三次，可以在后面跟 -[num] 参数自定义显示次数
+git log ( -[num] )
+# 显示当前分支的版本历史，默认显示三次。可以在后面跟 -[num] 参数自定义显示次数
 
-git log -[num] --pretty=oneline
-# 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
+git log --pretty=oneline ( -[num] )
+# 使提交信息一条仅占一行。如果不加 -[num] 参数，则默认显示过去 30 次提交信息
 
 git log --graph
 # 查看分支合并图
 
 git reflog
-# 查看之前进行操作的每一次命令
+# 查看 HEAD 的每一次变化历史
 
 git diff
 # 显示所有文件的暂存区和工作区的差异
@@ -253,12 +253,14 @@ git remote set-url origin [URL]
 
 ```
 git config --global alias.[st] status
-# 配置别名，用 st 代替 status。--global 参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用。此修改将保存至 .gitconfig 文件中。也可以直接进入 .gitconfig 文件批量修改。
+# 配置命令别名。比如用 st 代替 status
+# --global 参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用
+# 此修改将保存至 .gitconfig 文件中，也可以直接进入 .gitconfig 文件批量修改
 ```
 
-### 命令简写意义
+### 一些参数简写意义
 
-来自 [阮一峰：常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html) 一文中 AnnabellChan 的评论
+来自 [阮一峰：常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html) 一文中 AnnabellChan 的评论：
 
 ```
 git checkout -b，b 其实是 browse 的 abbr
