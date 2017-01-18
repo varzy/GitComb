@@ -138,9 +138,6 @@ git branch [branch]
 git checkout -b [branch]
 # 新建一个分支，并切换到该分支
 
-git branch [branch] [commit]
-# 新建一个分支，指向指定 commit
-
 git --orphan [branch]
 # 新建一个空白分支​。常用于创建 gh-pages 分支
 
@@ -153,37 +150,40 @@ git merge --no-ff [branch]
 git push origin --delete [branch]
 git branch -dr [remote/branch]
 # 删除远程分支
+
+git branch [branch] [commit]
+# 新建一个分支，指向指定 commit
 ```
 
 ## 标签
 
 ```
 git tag
-# 列出所有tag
+# 列出所有标签
 
 git tag [tag]
-# 在当前 commit 新建一个 tag
+# 在当前 commit 新建一个标签
 
 git tag [tag] [commit]
-# 在指定 commit 新建一个 tag
+# 在指定 commit 新建一个标签
 
 git show [tag]
-# 查看 tag 信息
+# 查看标签信息
 
 git push origin [tag]
-# 提交指定 tag
+# 提交指定标签
 
 git push origin --tags
-# 提交所有 tag
+# 提交所有标签
 
 git tag -d [tag]
-# 删除本地 tag
+# 删除本地标签
 
 git push origin :refs/tags/[tag]
-# 删除远程 tag
+# 删除远程标签。要想删除远程标签，必须先删除本地标签
 
 git checkout -b [branch] [tag]
-# 新建一个分支，指向某个 tag
+# 新建一个分支，指向某个标签
 ```
 
 ## 远程仓库
@@ -218,7 +218,7 @@ git remote show [remote]
 # 显示某个远程仓库的信息
 
 git pull origin [branch]
-# 取回远程仓库的变化，并与本地分支合并
+# 取回远程仓库的变化，并直接与本地分支合并
 ```
 
 ### 推送
@@ -246,13 +246,17 @@ git remote set-url origin [URL]
 
 ## 其他
 
-```
-git config --global alias.st status
-# 配置别名，用 st 代替 status。--global 参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用。此修改将保存至 .gitconfig 文件中
-```
+### 配置 .gitconfig
 
 ```
-git checkout -b，b其实是browse的abbr.
+git config --global alias.[st] status
+# 配置别名，用 st 代替 status。--global 参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用。此修改将保存至 .gitconfig 文件中。也可以直接进入 .gitconfig 文件批量修改。
+```
+
+### 命令简写意义
+
+```
+git checkout -b，b 其实是 browse 的 abbr
 git branch -r, r -> remote
 git branch -a, a -> all
 git config -l, l -> list
