@@ -214,11 +214,17 @@ git clone [URL] ( --depth [num] )
 git fetch ( [remote] )
 # 下载远程仓库的所有变动
 
+git fetch -p
+# 获取远程仓库对远程分支的删除操作
+
 git remote -v
 # 显示所有远程仓库
 
 git remote show [remote]
 # 显示某个远程仓库的信息
+
+git checkout -b origin/[branch]
+# 在本地新建一个分支，并使其与远程分支保持同步
 
 git pull origin [branch]
 # 取回远程仓库的变化，并直接与本地分支合并
