@@ -179,11 +179,37 @@ git diff HEAD -- [file]
 
 ## 远程仓库
 
-```
+### 克隆
 
 ```
+git clone [URL]
+```
 
+### 拉取
 
+```
+git fetch ( [remote] )
+# 下载远程仓库的所有变动
+
+git remote -v
+# 显示所有远程仓库
+
+git remote show [remote]
+# 显示某个远程仓库的信息
+
+git pull [remote] [branch]
+# 取回远程仓库的变化，并与本地分支合并
+```
+
+### 提交
+
+```
+git push [remote] [branch]
+# 上传本地指定分支到远程仓库
+
+git push [remote] --all
+# 推送所有分支到远程仓库
+```
 
 ## 补充
 
