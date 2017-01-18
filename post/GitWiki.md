@@ -167,6 +167,9 @@ git log
 git log -[num] --pretty=oneline
 # 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
 
+git log --graph
+# 查看分支合并图
+
 git reflog
 # 查看之前进行操作的每一次命令
 
@@ -185,10 +188,21 @@ git diff HEAD -- [file]
 
 ## 远程仓库
 
+### SSH Key
+
+```
+ssh-keygen -t rsa -C "i@zyis.me"
+# 创建 SSH 密钥
+
+ssh -T git@github.com
+# 测试是否顺利连接到 Github
+```
+
 ### 克隆
 
 ```
-git clone [URL]
+git clone [URL] ( --depth [num] )
+# 如果添加 --depth [num] 参数可以指定克隆深度。比如 --depth 1 表示仅克隆最近的一次 commit
 ```
 
 ### 拉取
@@ -203,21 +217,39 @@ git remote -v
 git remote show [remote]
 # 显示某个远程仓库的信息
 
-git pull [remote] [branch]
+git pull origin [branch]
 # 取回远程仓库的变化，并与本地分支合并
 ```
 
-### 提交
+### 推送
 
 ```
-git push [remote] [branch]
+git push -u origin master
+# 把当前 master 分支首次推送到远程
+
+git push origin [branch]
 # 上传本地指定分支到远程仓库
 
-git push [remote] --all
+git push origin --all
 # 推送所有分支到远程仓库
 ```
 
-## 补充
+### 修改
+
+```
+git remote add origin [URL]
+# 添加远程仓库
+
+git remote set-url origin [URL]
+# 修改远程仓库
+```
+
+## 其他
+
+```
+git config --global alias.st status
+# 配置别名，用 st 代替 status。--global 参数是全局参数，也就是这些命令在这台电脑的所有 Git 仓库下都有用。此修改将保存至 .gitconfig 文件中
+```
 
 ```
 git checkout -b，b其实是browse的abbr.
