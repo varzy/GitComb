@@ -35,7 +35,7 @@ git add .
 # 添加当前目录所有文件到暂存区​
 
 git add -p
-# 对每个文件的修改会要求逐次手动确认
+# 将文件添加到暂存区时，要求逐次手动确认
 ```
 
 ### 删除文件
@@ -52,10 +52,41 @@ git rm --cached [file]
 
 ```
 git commit -m "[description]"
-# 提交暂存区的所有文件到仓库区
+# 提交暂存区的所有文件到仓库
 
 git commit -m "[description]" [file] [file]
-# 提交暂存区的指定文件到仓库区
+# 提交暂存区的指定文件到仓库
+```
+
+## 查看
+
+```
+git status
+# 显示有过变更的文件
+
+git log
+# 显示当前分支的版本历史。默认显示三次，可以在后面跟 -[num] 参数自定义显示次数
+
+git log -[num] --pretty=oneline
+# 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
+
+git log --graph
+# 查看分支合并图
+
+git reflog
+# 查看之前进行操作的每一次命令
+
+git diff
+# 显示所有文件的暂存区和工作区的差异
+
+git diff -- [file]
+# 显示某个文件的暂存区和工作区的差异
+
+git diff HEAD
+# 显示所有文件的工作区与当前分支最新 commit 之间的差异
+
+git diff HEAD -- [file]
+# 显示某个文件的工作区与当前分支最新 commit 之间的差异
 ```
 
 ## 撤销
@@ -68,13 +99,13 @@ git checkout [commit] [file]
 # 恢复某个 commit 的指定文件到暂存区和工作区
 
 git checkout .
-# 恢复暂存区的所有文件到工作区
+# 恢复目前暂存区的所有文件到工作区
 
 git reset --hard
 # 重置暂存区与工作区，与上一次 commit 保持一致​
 
 git reset --hard HEAD^
-# 版本回退。在 Git 中，用 HEAD 表示当前版本，上一个版本就是 HEAD^，上上一个版本就是 HEAD^^，当然往上 100 个版本写 100 个 ^ 比较容易数不过来，所以写成 HEAD~100
+# 将文件版本快速回退至上一个版本。在 Git 中，HEAD 表示当前版本，上一个版本是 HEAD^，上上一个版本是 HEAD^^。也可以用数字表示，比如上 100 个版本是 HEAD~100
 
 git reset [commit]
 # 重置当前分支的 HEAD 为指定 commit，同时重置暂存区，但工作区不变
@@ -108,10 +139,10 @@ git checkout -b [branch]
 # 新建一个分支，并切换到该分支
 
 git branch [branch] [commit]
-# 新建一个分支，指向指定commit
+# 新建一个分支，指向指定 commit
 
-git --orphan gh-pages
-# 新建一个空白分支​
+git --orphan [branch]
+# 新建一个空白分支​。常用于创建 gh-pages 分支
 
 git merge [branch]
 # 使用快速合并，合并指定分支到当前分支
@@ -153,37 +184,6 @@ git push origin :refs/tags/[tag]
 
 git checkout -b [branch] [tag]
 # 新建一个分支，指向某个 tag
-```
-
-## 查看
-
-```
-git status
-# 显示有过变更的文件
-
-git log
-# 显示当前分支的版本历史。默认显示三次，可以在后面跟 -[num] 参数自定义显示次数
-
-git log -[num] --pretty=oneline
-# 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
-
-git log --graph
-# 查看分支合并图
-
-git reflog
-# 查看之前进行操作的每一次命令
-
-git diff
-# 显示所有文件的暂存区和工作区的差异
-
-git diff -- [file]
-# 显示某个文件的暂存区和工作区的差异
-
-git diff HEAD
-# 显示所有文件的工作区与当前分支最新 commit 之间的差异
-
-git diff HEAD -- [file]
-# 显示某个文件的工作区与当前分支最新 commit 之间的差异
 ```
 
 ## 远程仓库
