@@ -138,7 +138,7 @@ git branch [branch]
 git checkout -b [branch]
 # 新建一个分支，并切换到该分支
 
-git --orphan [branch]
+git checkout --orphan [branch]
 # 新建一个空白分支​。常用于创建 gh-pages 分支
 
 git merge [branch]
