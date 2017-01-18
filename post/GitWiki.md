@@ -62,7 +62,7 @@ git commit -m "[description]" [file] [file]
 
 ```
 git checkout [file]
-# 恢复暂存区的指定文件到工作区
+# 让某个文件回到最近一次 git commit 或 git add 时的状态
 
 git checkout [commit] [file]
 # 恢复某个 commit 的指定文件到暂存区和工作区
@@ -72,6 +72,9 @@ git checkout .
 
 git reset --hard
 # 重置暂存区与工作区，与上一次 commit 保持一致​
+
+git reset --hard HEAD^
+# 版本回退。在 Git 中，用 HEAD 表示当前版本，上一个版本就是 HEAD^，上上一个版本就是 HEAD^^，当然往上 100 个版本写 100 个 ^ 比较容易数不过来，所以写成 HEAD~100
 
 git reset [commit]
 # 重置当前分支的 HEAD 为指定 commit，同时重置暂存区，但工作区不变
@@ -163,6 +166,9 @@ git log
 
 git log -[num] --pretty=oneline
 # 如果不加 -[num] 参数，则默认显示过去 30 次提交信息。提交信息一条仅占一行
+
+git reflog
+# 查看之前进行操作的每一次命令
 
 git diff
 # 显示所有文件的暂存区和工作区的差异
