@@ -1,11 +1,11 @@
-# Gitignore
+# gitconfig
 
 自用的 .gitconfig 文件配置。
 
 ```
 [user]
-  name = zy
-  email = i@zyis.me
+  name = 
+  email = 
 
 [alias]
 # basic
