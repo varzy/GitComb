@@ -11,14 +11,19 @@
   st = status
 
 # push
-  p = push
-  po = push origin
-  pom = push origin master
-  pot = push origin --tags
+  ps = push
+  pso = push origin
+  psom = push origin master
+  psot = push origin --tags
 
 # pull
   pl = pull
+  plo = pull origin
+  plom = pull origin master
+
+# fetch
   fe = fetch
+  feo = fetch origin
 
 # branch
   b = branch
