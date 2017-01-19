@@ -1,52 +1,52 @@
 [user]
-	name = 
-	email = 
+  name = 
+  email = 
 
 [alias]
 # basic
   i = init
   a = add
-	c = commit
-	cl = clone
-	st = status
+  c = commit
+  cl = clone
+  st = status
 
 # push
-	p = push
+  p = push
   po = push origin
-	pom = push origin master
+  pom = push origin master
   pot = push origin --tags
 
 # pull
   pl = pull
-	fe = fetch
+  fe = fetch
 
 # branch
-	b = branch
-	bd  = branch -d
-	bD  = branch -D
+  b = branch
+  bd  = branch -d
+  bD  = branch -D
 
 # tag
-	t = tag
-	td = tag -d
+  t = tag
+  td = tag -d
 
 # merge
   mg = merge
   mgn = merge --no-ff
 
 # checkout
-	co = checkout
-	cob = checkout -b
+  co = checkout
+  cob = checkout -b
 
 # reset
-	rs = reset --hard
-	rsl = reset --hard HEAD^
+  rs = reset --hard
+  rsl = reset --hard HEAD^
 
 # remote
-  re = remote
+  rm = remote
 
 # log
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	
+  
 [http]
   proxy = socks5://127.0.0.1:1080
 
@@ -54,4 +54,4 @@
   proxy = socks5://127.0.0.1:1080
 
 [credential]
-	helper = wincred
+  helper = wincred
