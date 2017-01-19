@@ -138,6 +138,9 @@ git branch [branch]
 git checkout -b [branch]
 # 新建一个分支，并切换到该分支
 
+git checkout -b origin/[branch]
+# 在本地新建一个分支，并使其与远程分支保持同步
+
 git checkout --orphan [branch]
 # 新建一个空白分支​。常用于创建 gh-pages 分支
 
@@ -228,9 +231,6 @@ git fetch -p
 
 git remote show [remote]
 # 显示某个远程仓库的信息
-
-git checkout -b origin/[branch]
-# 在本地新建一个分支，并使其与远程分支保持同步
 ```
 
 ### 推送
