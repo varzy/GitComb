@@ -14,6 +14,7 @@
   c = commit
   cl = clone
   st = status
+  cm = commit -m
 
 # push
   ps = push
