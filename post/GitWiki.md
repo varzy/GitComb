@@ -211,28 +211,36 @@ git clone [URL] ( --depth [num] )
 ### 拉取
 
 ```
+git remote -v
+# 显示所有远程仓库
+
+git pull ( [remote] [remote_branch]:[local_branch] )
+# 拉取远程仓库相应追踪分支的更改并直接合并到本地当前分支。如果当前分支只有一个追踪分支，连远程主机名都可以省略
+
+git pull origin [branch]
+# 取回远程仓库的变化，并直接与本地分支合并
+
 git fetch ( [remote] )
 # 下载远程仓库的所有变动
 
 git fetch -p
 # 获取远程仓库对远程分支的删除操作
 
-git remote -v
-# 显示所有远程仓库
-
 git remote show [remote]
 # 显示某个远程仓库的信息
 
 git checkout -b origin/[branch]
 # 在本地新建一个分支，并使其与远程分支保持同步
-
-git pull origin [branch]
-# 取回远程仓库的变化，并直接与本地分支合并
 ```
 
 ### 推送
 
 ```
+git push ( [remote] [local_branch]:[remote_branch] )
+# 推送本地当前分支的修改到远程仓库相应追踪分支。如果当前分支只有一个追踪分支，连远程主机名都可以省略
+# 如果该远程分支不存在，则会被新建
+# 注意，分支推送顺序的写法是 <来源地>:<目的地>，所以 git pull 是 <远程分支>:<本地分支>，而 git push 是 <本地分支>:<远程分支>
+
 git push -u origin master
 # 把当前 master 分支首次推送到远程
 
