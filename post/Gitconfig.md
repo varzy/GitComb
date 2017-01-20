@@ -12,6 +12,7 @@
   i = init
   a = add
   c = commit
+  o = origin
   cl = clone
   st = status
   cm = commit -m
@@ -66,4 +67,5 @@
 
 [credential]
   helper = wincred
+
 ```

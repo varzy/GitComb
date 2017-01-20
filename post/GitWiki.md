@@ -153,7 +153,7 @@ git merge --no-ff [branch]
 git rebase [branch]
 # 在一个分支里提交的改变移到另一个分支里重放一遍
 
-git push origin --delete [branch]
+git push origin -d [branch]
 git branch -dr [remote/branch]
 # 删除远程分支
 
@@ -247,7 +247,7 @@ git push -u origin master
 git push origin [branch]
 # 上传本地指定分支到远程仓库
 
-git push origin --all
+git push origin -a
 # 推送所有分支到远程仓库
 ```
 
