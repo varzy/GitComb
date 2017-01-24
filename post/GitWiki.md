@@ -263,7 +263,7 @@ git remote set-url origin [URL]
 
 ## 其他
 
-### 配置 .gitconfig
+### 配置命令别名
 
 ```
 git config --global alias.[st] status
