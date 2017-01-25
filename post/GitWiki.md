@@ -138,7 +138,7 @@ git branch [branch]
 git checkout -b [branch]
 # 新建一个分支，并切换到该分支
 
-git checkout -b origin/[branch]
+git checkout -b [branch] origin/[branch]
 # 在本地新建一个分支，并使其与远程分支保持同步
 
 git checkout --orphan [branch]
