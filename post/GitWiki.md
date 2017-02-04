@@ -262,6 +262,9 @@ git remote add origin [URL]
 
 git remote set-url origin [URL]
 # 修改远程仓库
+
+git remote set-url -a origin [URL]
+# 添加一个远程仓库，并使其名字为 origin
 ```
 
 ## 其他
