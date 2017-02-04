@@ -202,6 +202,9 @@ ssh-keygen -t rsa -C "i@zyis.me"
 
 ssh -T git@github.com
 # 测试是否顺利连接到 Github
+
+ssh -T git@git.coding.net
+# 测试是否顺利连接到 Coding.net
 ```
 
 ### 克隆
