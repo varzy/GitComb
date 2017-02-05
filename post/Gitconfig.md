@@ -20,6 +20,7 @@
 # push
   ps = push
   pso = push origin
+  psc = push coding
   psom = push origin master
   psot = push origin --tags
 
@@ -34,8 +35,8 @@
 
 # branch
   b = branch
-  bd  = branch -d
-  bD  = branch -D
+  bd = branch -d
+  bD = branch -D
 
 # tag
   t = tag
@@ -67,5 +68,4 @@
 
 [credential]
   helper = wincred
-
 ```
