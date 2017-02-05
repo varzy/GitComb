@@ -263,8 +263,13 @@ git remote add origin [URL]
 git remote set-url origin [URL]
 # 修改远程仓库
 
-git remote set-url -a origin [URL]
+git remote add [name] [URL]
+# 添加一个名为 [name] 的新远程仓库
+
+git remote set-url --add origin [URL]
 # 添加一个远程仓库，并使其名字为 origin
+# 使用此方法可以实现一键推送至多个远程仓库
+# 但拉取时仅能拉取 .git/config 中列出的第一个原始仓库的更改
 ```
 
 ## 其他
