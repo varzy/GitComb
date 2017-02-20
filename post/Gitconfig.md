@@ -16,6 +16,7 @@
   cl = clone
   st = status
   cm = commit -m
+  sm = submodule
 
 # push
   ps = push
