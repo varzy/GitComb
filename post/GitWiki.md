@@ -272,6 +272,19 @@ git remote set-url --add origin [URL]
 # 但拉取时仅能拉取 .git/config 中列出的第一个原始仓库的更改
 ```
 
+## 子模块
+
+```
+git submodule add [URL]
+# 添加子模块
+
+git submodule init
+# 初始化你的本地配置文件
+
+git submodule update
+# 更新子模块
+```
+
 ## 其他
 
 ### 配置命令别名
