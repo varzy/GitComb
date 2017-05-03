@@ -1,6 +1,6 @@
-# gitconfig
+# .gitconfig
 
-自用的 .gitconfig 文件配置。
+My own ".gitconfig" file.
 
 ```
 [user]
@@ -62,12 +62,9 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   rlg = reflog
   
-[http]
+[http "https://github.com"]
   proxy = socks5://127.0.0.1:1080
 
-[https]
+[https "https://github.com"]
   proxy = socks5://127.0.0.1:1080
-
-[credential]
-  helper = wincred
 ```

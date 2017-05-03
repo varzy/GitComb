@@ -1,4 +1,4 @@
-# GitWiki
+# Git Wiki
 
 ## 配置
 
