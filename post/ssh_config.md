@@ -1,8 +1,8 @@
 # SSH Config
 
-Set up the proxy for ssh connection.
+Set the proxy for ssh connection.
 
-Create a new text file in your ".ssh" floder, add the following content. Enjoy~
+Create a new text document in your ".ssh" folder, add the following content. Enjoy~
 
 ```
 Host github.com

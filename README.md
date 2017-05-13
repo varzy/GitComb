@@ -1,5 +1,14 @@
 # GitComb
 
-Git 知识梳理。
+Some knowledge of gitcomb, update occasionally.
 
-在线链接： <http://varzy.me/2-Skill/GitList/>
+## Post List
+
+- Gitconfig: My own ".gitconfig" file
+- GitWiki: Some commonly used git commands
+- SSH Config: Set the proxy for ssh connection. Plus, fuck gfw
+
+## Links
+
+- Github: <http://varzy.me/2-Skill/GitList/>
+- Gitbook: <https://varzy.gitbooks.io/gitcomb/>
