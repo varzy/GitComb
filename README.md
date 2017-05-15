@@ -10,5 +10,5 @@ Some knowledge of gitcomb, update occasionally.
 
 ## Links
 
-- Github: <http://varzy.me/2-Skill/GitList/>
-- Gitbook: <https://varzy.gitbooks.io/gitcomb/>
+- Github: <https://github.com/varzy/GitComb>
+- Gitbook: <https://varzy.gitbooks.io/gitcomb>
