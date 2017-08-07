@@ -4,19 +4,24 @@ My own ".gitconfig" file.
 
 ```
 [user]
-  name = 
-  email = 
+  name =
+  email =
 
 [alias]
 # basic
   i = init
+  ib = init --bare
   a = add
   aa = add .
   c = commit
   cm = commit -m
   cl = clone
-  st = status
+  cll = clone --depth 1
+  sts = status
+  st = stash
+  stp = stash pop
   re = remote
+  rb = rebase
   # sm = submodule
 
 # push
@@ -28,6 +33,7 @@ My own ".gitconfig" file.
 
 # pull
   pl = pull
+  plr = pull --rebase
   plo = pull origin
   plom = pull origin master
 
@@ -51,6 +57,7 @@ My own ".gitconfig" file.
 # checkout
   co = checkout
   cob = checkout -b
+  coo = checkout --orphan
 
 # reset
   rs = reset --hard
@@ -59,7 +66,7 @@ My own ".gitconfig" file.
 # log
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   rlg = reflog
-  
+
 [http "https://github.com"]
   proxy = socks5://127.0.0.1:1080
 

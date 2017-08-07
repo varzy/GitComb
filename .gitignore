@@ -14,3 +14,29 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+
+# ============
+# Customized
+# ============
+
+# folder
+.vscode
+.idea
+_temp
+_dev
+vendor
+.DS_Store
+
+# ms office
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# compress
+*.rar
+*.zip
+*.7z
